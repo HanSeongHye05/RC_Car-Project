@@ -1,41 +1,33 @@
-# STM32 RC Car Autonomous Driving
+# STM32 RC Car Project
 
-STM32 기반 초음파 센서를 이용한 장애물 회피 RC Car 자율주행 시스템
-
----
-
-## Project Overview
-
-본 프로젝트는 STM32 마이크로컨트롤러와 초음파 센서를 이용하여  
-장애물을 감지하고 회피하며 주행하는 RC Car 자율주행 시스템을 구현한 프로젝트입니다.
-
-전방 거리 측정과 좌우 거리 비교를 기반으로 회피 방향을 결정하며  
-PWM 제어를 통해 DC 모터 속도를 제어합니다.
+## 📌 Overview
+STM32 기반 RC Car 제어 시스템 구현 프로젝트입니다.  
+PWM 모터 제어, Bluetooth(UART) 통신, 초음파 센서를 활용한 장애물 감지 기능을 포함합니다.
 
 ---
 
-## Hardware
+## ⚙️ 주요 기능
 
-- MCU : STM32
-- Ultrasonic Sensor : HC-SR04
-- Motor Driver : L298N
-- DC Motor
-
----
-
-## Control Logic
-
-1. 초음파 센서를 이용해 전방 거리 측정
-2. 전방 장애물 감지 시 좌우 거리 비교
-3. 좌회전 또는 우회전 결정
-4. PWM 기반 모터 속도 제어
+- PWM 기반 DC 모터 속도 및 방향 제어
+- Bluetooth(UART) 기반 원격 제어
+- 초음파 센서 기반 거리 측정 및 자동 정지 기능
 
 ---
 
-## Technologies
+## 🧠 시스템 구조
 
-- STM32
-- PWM Motor Control
-- Timer Distance Measurement
-- Ultrasonic Sensor (HC-SR04)
-- L298N Motor Driver
+Input (Bluetooth / Sensor)
+→ Control Logic (Car_Control)
+→ Output (Motor)
+
+---
+
+## 🛠️ 기술 스택
+
+- STM32 HAL Driver
+- UART / PWM / Timer Input Capture
+- Embedded C
+
+---
+
+## 📁 코드 구조
